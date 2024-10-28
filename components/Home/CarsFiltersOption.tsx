@@ -1,6 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-function CarsFiltersOption() {
+function CarsFiltersOption({carsList, setBrand, orderCarList}:any) {
+
+  const [ brandList, setBrandList ] = useState<any[]>([])
+
+    useEffect(() => {
+        if(carsList){
+            filterCarList()
+        }
+    }, [carsList])
+
+  const filterCarList = () => {
+    const BrandSet = new Set()    
+    carsList.forEach((element:any) => {
+
+        BrandSet.add(element.carBrand)
+    })
+
+    setBrandList(Array.from(BrandSet))
+
+}
+
   return (
     <div className='mt-10 flex items-center justify-between'>
         <div>
@@ -8,17 +28,16 @@ function CarsFiltersOption() {
             <h2>Explore our cars you might likes</h2>
         </div>
         <div className='flex gap-5'>
-            <select className="select select-bordered w-full md:block max-w-xs hidden">
-                <option disabled selected>Price</option>
-                <option>Min to Max</option>
-                <option>Max to Min</option>
+            <select defaultValue={'DEFAULT'} onChange={(e) => orderCarList(e.target.value)} className="select select-bordered w-full md:block max-w-xs hidden">
+                <option value="DEFAULT" disabled>Price</option>
+                <option value={-1}>Min to Max</option>
+                <option value={1}>Max to Min</option>
             </select>
-            <select className="select select-bordered w-full md:block max-w-xs hidden">
-                <option disabled selected>Brand</option>
-                <option>Toyota</option>
-                <option>Jeep</option>
-                <option>BMW</option>
-                <option>Mazda</option>
+            <select defaultValue={'DEFAULT'} onChange={(e) => {setBrand(e.target.value)}} className="select select-bordered w-full md:block max-w-xs hidden">
+                <option value="DEFAULT" disabled>Brand</option>
+                {brandList&&brandList.map((brand: string, index: number) => (
+                    <option key={index} value={brand}>{brand}</option>
+                ))}
             </select>
         </div>
     </div>

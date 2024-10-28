@@ -7,6 +7,7 @@ export const getCarList = async()=>{
                 carAvg
                 carBrand
                 createdAt
+                carType
                 id
                 image(where: {}) {
                 url
@@ -15,7 +16,7 @@ export const getCarList = async()=>{
                 price
                 publishedAt
                 seat
-                updatedAt
+                updatedAt 
             }
         }
     `
