@@ -11,6 +11,7 @@ function CarCard(props:any) {
 
   useEffect(() => {
     if(props.car){
+        console.log(props.car.image)
         setCar(props.car)
     }
   },[props.car])
@@ -24,7 +25,7 @@ function CarCard(props:any) {
                 <span className='text-[12px] font-light'> /day</span>
             </h2>
             <div className='w-full flex justify-center'>
-                <Image src={car.image?.url} alt={car.name} width={220} height={200} className='w-[250px] justify-center h-[150px] mb-3 object-contain' />
+            <img alt={car.name} src={car.image.url} width={220} height={200} className='w-[250px] justify-center h-[150px] mb-3 object-contain'></img>
             </div>
             <div className='flex justify-between group-hover:hidden ease-in-out transition-all duration-500'>
                 <div className='text-center text-gray-500'>

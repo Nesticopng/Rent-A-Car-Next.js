@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    domains: ['us-west-2.graphassets.com']
-  }
+    images: {
+        domains: ['us-west-2.graphassets.com'],
+      },
 };
 
 
