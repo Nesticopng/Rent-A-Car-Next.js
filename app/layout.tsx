@@ -17,8 +17,6 @@ import {
   SignedOut,
 } from '@clerk/nextjs'
 
-
-
 export default function RootLayout({
   children,
 }: {
