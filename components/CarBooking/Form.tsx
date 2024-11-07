@@ -1,6 +1,7 @@
+import { BookCreatedFlagContext } from '@/context/BookCreatedFlagContext'
 import { getLocationList, createBooking } from '@/services'
 import { useUser } from '@clerk/nextjs'
-import React, {useEffect, useState} from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 function Form({car}:any) {
   const [ formValue, setFormValue ] = useState({
@@ -16,6 +17,7 @@ function Form({car}:any) {
   })
 
   const [ storeLocation, setStoreLocation] = useState<any>([])
+  const { showToastMsg, setShowToastMsg } = useContext(BookCreatedFlagContext)
 
   useEffect(() => {
     getStoreLocation_()
@@ -46,9 +48,14 @@ function Form({car}:any) {
   }
 
   const handleSubmit= async () => {
-    console.log(formValue)
-
-    const res = await createBooking(formValue)
+    try {
+      const res = await createBooking(formValue)
+      if(res) {
+        setShowToastMsg(true)
+      }
+    } catch (error) {
+      console.error("Error creating the reservation.", error)
+    }
   }
 
   return (
