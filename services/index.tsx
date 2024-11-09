@@ -1,5 +1,7 @@
 import { gql, request } from 'graphql-request'
 
+const API_URL = `${process.env.API_GRAPHQL}`
+
 export const getCarList = async () => {
     const query = gql`
         query CarList {
@@ -21,7 +23,7 @@ export const getCarList = async () => {
         }
     `
 
-    const res = await request(process.env.API_GRAPHQL, query)
+    const res = await request(API_URL, query)
     return res
 }
 
@@ -34,7 +36,7 @@ export const getLocationList = async () => {
         }
     `
 
-    const res = await request(process.env.API_GRAPHQL, query)
+    const res = await request(API_URL, query)
     return res
 }
 
@@ -58,6 +60,6 @@ export const createBooking = async (formValue: any) => {
         }
     `
 
-    const req = await request(process.env.API_GRAPHQL, mutationQuery)
+    const req = await request(API_URL, mutationQuery)
     return req
 }
