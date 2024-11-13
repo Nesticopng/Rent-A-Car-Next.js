@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Outfit } from "next/font/google";
-import NavBar from "@/components/NavBar";
+import Nav from "@/components/UI/Nav";
 
 const outfit = Outfit({subsets: ['latin']})
 
@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 
 import {
   ClerkProvider,
-  SignInButton,
   SignedIn,
   SignedOut,
 } from '@clerk/nextjs'
@@ -23,14 +22,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider dynamic>
       <html lang="en">
         <body className={outfit.className}>
+          <Nav />
           <SignedOut>
-            <SignInButton />
           </SignedOut>
           <SignedIn>
-            <NavBar />
             {children}
           </SignedIn>
         </body>

@@ -3,7 +3,7 @@ import CarsFiltersOption from "@/components/Home/CarsFiltersOption";
 import CarsList from "@/components/Home/CarsList";
 import Hero from "@/components/Home/Hero";
 import SearchInput from "@/components/Home/SearchInput";
-import Toast from "@/components/Toast";
+import Toast from "@/components/UI/Toast";
 import { BookCreatedFlagContext } from "@/context/BookCreatedFlagContext";
 import { getCarList } from "@/services";
 import { useEffect, useState } from "react";
