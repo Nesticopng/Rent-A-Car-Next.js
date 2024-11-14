@@ -1,6 +1,6 @@
 import { gql, request } from 'graphql-request'
 
-const API_URL = `${process.env.API_GRAPHQL}`
+const API_URL = `https://us-west-2.cdn.hygraph.com/content/cm2qotevg02cr07wdd6kdqpsg/master`
 
 export const getCarList = async () => {
     const query = gql`

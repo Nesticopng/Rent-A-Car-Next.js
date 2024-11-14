@@ -2,7 +2,7 @@ import React from 'react'
 
 function SearchInput() {
   return (
-        <div className='mt-5 '>
+        <div className='mt-5' id="cars-section">
             <h2 className='text-center text-[20px] text-gray-400 mb-3'>Lets Search what you need.</h2>
             <div className='flex justify-center'>
                 <div className='flex bg-gray-100 p-1 px-5 gap-2 rounded-full divide-x'>

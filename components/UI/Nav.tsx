@@ -3,11 +3,7 @@ import Link from "next/link";
 import { UserButton, SignInButton, useAuth } from "@clerk/nextjs";
 
 export default function Nav() {
-    const { isLoaded, userId } = useAuth()
-
-    if (userId || isLoaded) {
-        // desaparecer Sing In
-    }
+    const { userId } = useAuth()
 
     return (
         <div className="navbar bg-base-100 text-base-content sticky top-0 z-[10000] flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] shadow-sm">
@@ -19,7 +15,7 @@ export default function Nav() {
                     <ul className="menu menu-horizontal px-1 items-center text-base antialiased font-sans font-semibold">
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/contact">Contact Us</Link></li>
-                        <li className="flex-none"><SignInButton /></li>
+                        {!userId && <li className="flex-none"><SignInButton /></li>}
                         <div className="ml-6 flex items-center h-full"><UserButton /></div>
                     </ul>
                 </div>
@@ -50,7 +46,7 @@ export default function Nav() {
                             <div className="divider"></div>
                             <li className="text-base antialiased font-sans font-medium"><Link href="/">Home</Link></li>
                             <li className="text-base antialiased font-sans font-medium"><Link href="/contact">Contact Us</Link></li>
-                            <li className="text-base antialiased font-sans font-medium"><SignInButton /></li>
+                            {!userId && <li className="text-base antialiased font-sans font-medium mt-auto"><SignInButton /></li>}
                         </ul>
                     </div>
                 </div>
