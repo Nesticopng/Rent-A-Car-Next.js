@@ -14,8 +14,8 @@ export default function Nav() {
                 <div className="flex-none hidden md:block">
                     <ul className="menu menu-horizontal px-1 items-center text-base antialiased font-sans font-semibold">
                         <li><Link href="/">Home</Link></li>
-                        <li><Link href="/contact">Contact Us</Link></li>
-                        {!userId && <li className="flex-none"><SignInButton /></li>}
+                        <li><Link className="ml-2" href="https://wa.link/zktknj">Contact Us</Link></li>
+                        {!userId && <li className="ml-2"><SignInButton /></li>}
                         <div className="ml-6 flex items-center h-full"><UserButton /></div>
                     </ul>
                 </div>
@@ -45,7 +45,7 @@ export default function Nav() {
                             </div>
                             <div className="divider"></div>
                             <li className="text-base antialiased font-sans font-medium"><Link href="/">Home</Link></li>
-                            <li className="text-base antialiased font-sans font-medium"><Link href="/contact">Contact Us</Link></li>
+                            <li className="text-base antialiased font-sans font-medium"><Link href="https://wa.link/zktknj">Contact Us</Link></li>
                             {!userId && <li className="text-base antialiased font-sans font-medium mt-auto"><SignInButton /></li>}
                         </ul>
                     </div>

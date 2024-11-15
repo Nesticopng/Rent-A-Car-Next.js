@@ -15,6 +15,7 @@ import {
   SignedIn,
   SignedOut,
 } from '@clerk/nextjs'
+import Footer from "@/components/UI/Footer";
 
 export default function RootLayout({
   children,
@@ -31,6 +32,7 @@ export default function RootLayout({
           <SignedIn>
             {children}
           </SignedIn>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
