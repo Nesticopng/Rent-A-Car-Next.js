@@ -20,7 +20,7 @@ function Hero() {
             <button onClick={handleScroll} className='hidden md:flex items-center justify-center p-2 mt-5 bg-blue-500 text-[110%] text-white font-medium px-4 rounded-full shadow-lg hover:shadow-2xl shadow-indigo-500/70 hover:scale-105 transition-all'>Explore Cars</button>
         </div>
         <div>
-            <Image src={'/HeroSection.png'} alt='Hero BMW M5' width={1500} height={1500 }/>
+            <Image src={'/HeroSection.png'} alt='Hero BMW M5' width={1500} height={1500}/>
         </div>
     </div>
   )

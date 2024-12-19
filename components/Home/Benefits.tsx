@@ -1,6 +1,6 @@
 import React from 'react'
 
-function HomeCard() {
+function Benefits() {
   return (
     <div className="relative w-full h-[83vh] overflow-hidden">
         <div className='mt-16 mx-24'>
@@ -72,4 +72,4 @@ function HomeCard() {
   )
 }
  
-export default HomeCard
+export default Benefits

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Image from "next/image"
 import { FaGasPump } from "react-icons/fa"
 import { MdAirlineSeatReclineNormal } from "react-icons/md";
 import { PiSteeringWheelFill } from "react-icons/pi";

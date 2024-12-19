@@ -4,7 +4,7 @@ import { Outfit } from "next/font/google";
 import Nav from "@/components/UI/Nav";
 import Footer from "@/components/UI/Footer";
 import LetsStart from "@/components/Home/LetsStart";
-import HomeCard from "@/components/Home/HomeCard";
+import Benefits from "@/components/Home/Benefits";
 import CarrouselSection from "@/components/Home/CarrouselSection";
 
 const outfit = Outfit({subsets: ['latin']})
@@ -32,7 +32,7 @@ export default function RootLayout({
           <Nav />
           <SignedOut>
             <LetsStart />
-            <HomeCard />
+            <Benefits />
             <CarrouselSection />
           </SignedOut>
           <SignedIn>
