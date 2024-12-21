@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rent a Car 🚗
 
-## Getting Started
+Rent a Car es una aplicación web desarrollada para facilitar la renta de autos, ofreciendo una interfaz intuitiva y un sistema funcional donde los usuarios pueden explorar y alquilar vehículos de manera sencilla.
 
-First, run the development server:
 
+## Tecnologías Utilizadas
+
+* __TypeScript__
+* __Next.js__
+* __GraphQL__
+* __Clerk__
+* __Tailwind__
+* __DaisyUI__
+
+
+## Instalación
+Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local
+
+1 - Clona este repositorio
+```bash
+git clone https://github.com/Nesticopng/Rent-A-Car-Next.js.git
+```
+2 - Navega al directorio del proyecto
+```bash
+cd rent-a-car
+```
+3 - Configura las variables de entorno
+
+Crea un archivo .env.local en la raíz del proyecto y agrega las variables necesarias para la configuración de GraphQL y Clerk.
+
+4 - Inicia el servidor de desarrollo
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5 - Abre http://localhost:3000 en tu navegador para ver la aplicación.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Enlace a la Aplicación en Producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Puedes acceder a la versión desplegada de la aplicación en:
 
-## Learn More
+## [Rent a Car - 🚗](https://rent-a-car-next-js.vercel.app/)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+@nestico.png 2025
