@@ -1,13 +1,11 @@
-import React from 'react'
-
 function Benefits() {
   return (
-    <div className="relative w-full h-[83vh] lg:h-[70vh] overflow-hidden">
-        <div className='mt-16 mx-24'>
-          <h1 className='text-7xl font-bold'>Benefits</h1>
+    <div className="w-full sm:h-[120vh] md:h-[100vh] 2xl:h-[70vh] overflow-hidden">
+        <div className='mt-16 mx-12 md:mx-24'>
+          <h1 className='text-5xl md:text-7xl font-bold'>Benefits</h1>
         </div>
-        <div className='mt-24 mx-24 flex justify-between text-lg lg:text-2xl gap-11'>
-          <div>
+        <div className='mt-16 md:mt-24 mx-12 md:mx-24 md:flex justify-between text-lg lg:text-2xl gap-11'>
+          <div className="mb-16 md:m-0">
             <svg
               viewBox="0 0 1024 1024"
               fill="currentColor"
@@ -20,7 +18,7 @@ function Benefits() {
             Certified vehicles to take care of your trip at the best rates.
             </p>
           </div>
-          <div>
+          <div className="mb-16 md:m-0">
             <svg
               fill="currentColor"
               viewBox="0 0 16 16"
@@ -36,7 +34,7 @@ function Benefits() {
             From sports cars to comfortable trucks. You choose how to move.
             </p>
           </div>
-          <div>
+          <div className="mb-16 md:m-0">
             <svg
               fill="currentColor"
               viewBox="0 0 16 16"
@@ -50,7 +48,7 @@ function Benefits() {
             Guaranteed availability in your vehicles just when you need it.
             </p>
           </div>
-          <div>
+          <div className="mb-16 md:m-0">
             <svg
               viewBox="0 0 576 512"
               fill="currentColor"

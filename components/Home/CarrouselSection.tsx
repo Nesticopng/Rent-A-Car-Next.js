@@ -14,9 +14,9 @@ function CarrouselSection() {
   ];
 
   return (
-    <div className="relative w-full h-screen lg:h-[70vh] items-center justify-center overflow-hidden">
-      <div className="flex w-full mb-8 items-center justify-center">
-        <h1 className="text-7xl font-bold">Best Models</h1>
+    <div className="relative w-full sm:h-[60vh] md:h-screen 2xl:h-[70vh] items-center justify-center overflow-hidden">
+      <div className="flex w-full mb-16 md:mb-8 items-center justify-center">
+        <h1 className="text-4xl md:text-7xl font-bold">Best Models</h1>
       </div>
       <Flicking
         align="center"
@@ -27,13 +27,16 @@ function CarrouselSection() {
         {cars.map((car, index) => (
           <div
             key={index}
-            className={`w-[450px] h-[535px] mx-6 justify-center rounded-xl border-4 grid content-between border-gray-500`}
+            className={`w-[250px] h-[370px] md:w-[450px] md:h-[535px] mx-6 justify-center rounded-xl border-4 grid content-between border-gray-500`}
           >
             <div className="flex w-full justify-center mt-6">
-              <h1 className="text-3xl font-bold">{car.model}</h1>
+              <h1 className="text-xl md:text-3xl font-bold">{car.model}</h1>
             </div>
-            <div className="flex w-full justify-center">
+            <div className="hidden md:flex w-full justify-center">
               <Image src={car.img} alt={car.model} width={400} height={0} draggable={false} />
+            </div>
+            <div className="flex md:hidden w-full justify-center">
+              <Image src={car.img} alt={car.model} width={220} height={0} draggable={false} />
             </div>
             <button className="flex ease-in-out transition-all duration-300 hover:transition-all h-14 p-2 mb-6 w-full space-x-2 items-center justify-center bg-gradient-to-r from-blue-400 to-indigo-600 hover:from-indigo-700 hover:to-indigo-900 rounded-3xl text-white text-xl">
               <span className='items-center justify-center'>Rent Now!</span>
