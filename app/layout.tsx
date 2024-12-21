@@ -34,7 +34,7 @@ export default function RootLayout({
             <LetsStart />
             <Benefits />
             <CarrouselSection />
-            <div className="h-14"/>
+            <div className="h-4 md:h-14 lg:h-2"/>
           </SignedOut>
           <SignedIn>
             {children}

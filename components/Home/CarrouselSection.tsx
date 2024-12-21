@@ -14,7 +14,7 @@ function CarrouselSection() {
   ];
 
   return (
-    <div className="relative w-full h-screen items-center justify-center overflow-hidden">
+    <div className="relative w-full h-screen lg:h-[70vh] items-center justify-center overflow-hidden">
       <div className="flex w-full mb-8 items-center justify-center">
         <h1 className="text-7xl font-bold">Best Models</h1>
       </div>
